@@ -1,0 +1,133 @@
+<!--   NAME: David Ly
+  STUDENT ID: 043 150 101  
+
+  ALL IMAGES SOURCED FROM: https://unsplash.com/
+  ALL CUSTOM FONTS FROM: https://fonts.google.com/ 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Motivation Mart</title>
+
+    <!-- include CSS file -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="catalogue.html" class="right">Catalogue</a>
+      <a href="contact.html" class="right">Contact Us</a>
+      <a href="#" class="right">Sign in</a>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <img class="logo" src="images/logo.png" alt="Motivation Mart Logo" />
+      <p>Quotes and Memes and Posters</p>
+    </div>
+
+    <!-- main containers -->
+    <div class="column-layout">
+      <div class="sidebar-one" id="btnDiv">
+        <h3>Filter by Category</h3>
+
+        <button class="btn" id="all_button">All</button>
+        <button class="btn" id="quotes_button">Quotes</button>
+        <button class="btn" id="vibes_button">Vibes</button>
+        <button class="btn" id="funny_button">Funny</button>
+      </div>
+
+      <div class="main-column">
+        <h3 id="filter-option">All Current Posters</h3>
+
+        <div class="fixed-size-container" id="card-container">
+          <!-- ============= CARD START ============= 
+
+            USED THIS SPACE TO DEVELOP THE JAVASCRIPT CODE INJECTION
+          <div class="fixed-size-card">
+
+           
+          <img
+          class="fixed-size-card"
+          src="images/vibes/mountaintop.jpeg"
+          alt="image 1"
+          />
+        
+
+        <div class="fixed-size-card-text">
+
+          <p>Sparks of Inspiration</p>
+          <p>Price: $17.99 (CAD)</p>
+          <p>Category: Vibes</p>
+          <p>Description: When you finally have a creative breakthrough</p>
+          
+        </div>
+
+
+        </div>
+           ============= CARD END ============= -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-one">
+        <a href="#"> About |</a>
+        <a href="#"> Blog |</a>
+        <a href="#"> Returns |</a>
+        <a href="#"> Help </a>
+      </div>
+
+      <div class="footer-two">
+        <a href="#"> Instagram |</a>
+        <a href="#"> Facebook |</a>
+        <a href="#"> YouTube </a>
+      </div>
+
+      <div class="footer-three">
+        <a href="#"> English (EN-CA) $CAD </a>
+      </div>
+
+      <div class="footer-four">
+        <a href="#"> © 2020 David Ly |</a>
+        <a href="#"> Privacy & Terms </a>
+      </div>
+
+      <div class="footer-five">
+        <form action="https://formspree.io/xknqevnb" method="POST">
+          <label for="password-reset_email">Our Newsletter<br /></label>
+          <input
+            id="newsletter-email"
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            spellcheck="false"
+            autocomplete="email"
+            size="32"
+            autofocus
+            required
+            tabindex="1"
+          />
+
+          <div class="buttons">
+            <input
+              id="newsletter-subscribe"
+              type="submit"
+              name="subscribe"
+              value="Subscribe!"
+              tabindex="2"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- include data file and JS script -->
+
+    <script src="productsData.js"></script>
+    <script src="script-catalogue.js"></script>
+  </body>
+</html>

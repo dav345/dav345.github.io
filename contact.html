@@ -1,0 +1,249 @@
+<!--   NAME: David Ly
+  STUDENT ID: 043 150 101  
+
+  ALL IMAGES SOURCED FROM: https://unsplash.com/
+  ALL CUSTOM FONTS FROM: https://fonts.google.com/ 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Motivation Mart</title>
+    <!-- include CSS file -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="catalogue.html" class="right">Catalogue</a>
+      <a href="contact.html" class="right">Contact Us</a>
+      <a href="#" class="right">Sign in</a>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <img class="logo" src="images/logo.png" alt="Motivation Mart Logo" />
+      <p>Quotes and Memes and Posters</p>
+    </div>
+
+    <!-- main containers -->
+
+    <div class="fixed-size-container">
+      <h1>Contact Us</h1>
+    </div>
+
+    <div class="fixed-size-container" id="contact-form-container">
+      <form action="https://httpbin.org/post" method="POST">
+        <label for="contact-name">Name</label>
+        <input
+          required
+          id="contact-name"
+          name="name"
+          type="text"
+          spellcheck="false"
+          autocomplete="name"
+          size="32"
+          autofocus
+          tabindex="1"
+        />
+
+        <label for="contact-email">Email Address</label>
+        <input
+          required
+          id="contact-email"
+          name="email"
+          type="email"
+          placeholder="your@email.com"
+          spellcheck="false"
+          autocomplete="email"
+          size="32"
+          tabindex="2"
+        />
+
+        <label for="contact-address">Address</label>
+        <input
+          required
+          id="contact-address"
+          name="address"
+          type="text"
+          autocomplete="address"
+          size="32"
+          tabindex="3"
+        />
+
+        <label for="contact-city">City</label>
+        <input
+          required
+          id="contact-city"
+          name="city"
+          type="text"
+          list="ca-city-list"
+          size="32"
+          tabindex="4"
+        />
+        <datalist id="ca-city-list">
+          <option label="Barrie" value="Barrie"></option>
+          <option label="Calgary" value="Calgary"></option>
+          <option label="Charlottetown" value="Charlottetown"></option>
+          <option label="Chibougamau" value="Chibougamau"></option>
+          <option label="Chilliwack" value="Chilliwack"></option>
+          <option label="Cold Lake" value="Cold Lake"></option>
+          <option label="Dorval" value="Dorval"></option>
+          <option label="Edmonton" value="Edmonton"></option>
+          <option label="Flin Flon" value="Flin Flon"></option>
+          <option label="Hamilton" value="Hamilton"></option>
+          <option label="Iqualuit" value="Iqualuit"></option>
+          <option label="Ottawa" value="Ottawa"></option>
+          <option label="Miramichi" value="Miramichi"></option>
+          <option label="Montreal" value="Montreal"></option>
+          <option label="Red Deer" value="Red Deer"></option>
+          <option label="St. John" value="St. John"></option>
+          <option label="St. John's" value="St. John's"></option>
+          <option label="Toronto" value="Toronto"></option>
+          <option label="Vancouver" value="Vancouver"></option>
+          <option label="Whitehorse" value="Whitehorse"></option>
+          <option label="Winnipeg" value="Winnipeg"></option>
+          <option label="Yellowknife" value="Yellowknife"></option>
+        </datalist>
+        <!-- Source - Gov't of Canada: https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_18/unmin/docs/ref/datalist/datalist-en.html?wbdisable=false -->
+
+        <label for="contact-postalCode"
+          >Postal Code
+          <span>(must be a valid Canadian Postal Code, with or without a space)</span></label
+        >
+        <input
+          required
+          title="(must be a valid Canadian Postal Code, with or without a space)"
+          id="contact-postalCode"
+          name="postalCode"
+          type="text"
+          size="32"
+          pattern="^(?!.*[DFIOQUdfioqu])[A-VXYa-vxy][0-9][A-Za-z] ?[0-9][A-Za-z][0-9]$"
+          tabindex="5"
+        />
+        <!-- Source, based on - Validate Canadian Postal Codes: https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s15.html -->
+
+        <div class="buttons-radio">
+          <label for="question">Question</label>
+          <input
+            required
+            type="radio"
+            name="message-type"
+            id="contact-question"
+            value="question"
+            tabindex="6"
+          />
+          <label for="comment">Comment</label>
+          <input
+            type="radio"
+            name="message-type"
+            id="contact-comment"
+            value="comment"
+            tabindex="7"
+          />
+          <label for="order-problem">Order Problem</label>
+          <input
+            type="radio"
+            name="message-type"
+            id="contact-order-problem"
+            value="order-problem"
+            tabindex="8"
+          />
+        </div>
+
+        <textarea
+          required
+          id="contact-message"
+          name="message"
+          placeholder="Let us know how we can help..."
+          rows="10"
+          tabindex="9"
+        ></textarea>
+
+        <div id="order-number-label">
+          <label for="contact-order-number">Order Number</label>
+        </div>
+
+        <div id="order-number-input">
+          <input
+            id="contact-order-number"
+            name="order-number"
+            type="text"
+            autocomplete="off"
+            size="32"
+            tabindex="10"
+            placeholder="Enter your order number"
+            required
+          />
+        </div>
+
+        <input type="hidden" id="authorId" name="authorId" value="David Ly" />
+
+        <div class="buttons">
+          <input id="contact-submit" name="submit" type="submit" value="Submit" tabindex="11" />
+        </div>
+      </form>
+    </div>
+
+    <!-- main containers end -->
+
+    <div class="footer">
+      <div class="footer-one">
+        <a href="#"> About |</a>
+        <a href="#"> Blog |</a>
+        <a href="#"> Returns |</a>
+        <a href="#"> Help </a>
+      </div>
+
+      <div class="footer-two">
+        <a href="#"> Instagram |</a>
+        <a href="#"> Facebook |</a>
+        <a href="#"> YouTube </a>
+      </div>
+
+      <div class="footer-three">
+        <a href="#"> English (EN-CA) $CAD </a>
+      </div>
+
+      <div class="footer-four">
+        <a href="#"> © 2020 David Ly |</a>
+        <a href="#"> Privacy & Terms </a>
+      </div>
+
+      <div class="footer-five">
+        <form action="https://formspree.io/xknqevnb" method="POST">
+          <label for="password-reset_email">Our Newsletter<br /></label>
+          <input
+            id="newsletter-email"
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            spellcheck="false"
+            autocomplete="email"
+            size="32"
+            autofocus
+            required
+            tabindex="1"
+          />
+
+          <div class="buttons">
+            <input
+              id="newsletter-subscribe"
+              type="submit"
+              name="subscribe"
+              value="Subscribe!"
+              tabindex="2"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- include data file and JS script -->
+
+    <script src="productsData.js"></script>
+    <script src="script-contact.js"></script>
+  </body>
+</html>

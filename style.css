@@ -1,0 +1,289 @@
+/* 
+  NAME: David Ly
+  STUDENT ID: 043 150 101
+
+  Your CSS goes here.  Remember to include comments.
+*/
+
+/******************** Q2: Sans Serif font load source 
+font-family: 'Fugaz One', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+/******************** Q2: Serif font load source 
+font-family: "IBM Plex Serif", serif; */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+
+/*********************
+* Specify document parent defaults
+*/
+html,
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #222831;
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+}
+
+/******************** Limit site body max-width */
+body {
+  padding: 1.2em;
+  font-family: 'Fugaz One', cursive;
+  max-width: 1366px;
+  background-color: black;
+  padding-bottom: 100px;
+  margin: auto;
+  border-radius: 3px;
+}
+
+/******************** NAVBAR CSS - START */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  border-radius: 3px;
+}
+
+/******************** Style the navigation bar links */
+.navbar a {
+  float: left;
+  color: #ececec;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/******************** Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/******************** Change color on hover */
+.navbar a:hover {
+  background-color: #ececec;
+  color: black;
+}
+
+/******************** Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: #ececec;
+}
+/******************** NAVBAR CSS - END */
+
+/******************** HEADER CSS - START */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #222831;
+  color: #f2a365;
+  font-size: 40px;
+  border-radius: 3px;
+}
+
+.logo {
+  width: 30%;
+  min-width: 320px;
+  height: auto;
+}
+/******************** HEADER CSS - END */
+
+/******************** MAIN SECTION CONTAINING PRODUCT CARDS */
+.column-layout {
+  max-width: 1300px;
+  background-color: #30475e;
+  color: #ececec;
+  margin: 40px auto 0 auto;
+  line-height: 1.65;
+  padding: 20px 50px;
+  display: flex;
+  border-radius: 3px;
+}
+
+.main-column {
+  flex: 6;
+  order: 2;
+  border-radius: 3px;
+}
+
+.main-column h3 {
+  font-size: 300%;
+  text-align: right;
+}
+
+.sidebar-one {
+  flex: 1;
+  order: 1;
+  padding-right: 30px;
+}
+
+.sidebar-one h3 {
+  font-size: 250%;
+}
+
+.sidebar-two {
+  flex: 1;
+  order: 3;
+}
+/******************** MAIN SECTION END */
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #ececec;
+  cursor: pointer;
+  font-size: 200%;
+  display: block;
+  margin-left: auto;
+  margin-top: 25px;
+  border-radius: 3px;
+}
+
+/* Style buttons on mouse-over */
+.btn:hover {
+  background-color: #666;
+  color: #ececec;
+}
+
+/******************** Styling product cards container and cards */
+.fixed-size-container {
+  max-width: 100%;
+  margin: 0 auto 0 auto;
+  background-color: #30475e;
+  padding: 5px 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 3px;
+}
+
+.fixed-size-container h1 {
+  color: #f2a365;
+  font-size: 300%;
+}
+
+.fixed-size {
+  width: 330px;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+}
+
+.fixed-size-card {
+  width: 320px;
+  max-height: auto;
+  object-fit: cover;
+  background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+  border-radius: 3px;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+.fixed-size-card-text {
+  color: #ececec;
+  /*  font-size: 60px; */
+  text-align: left;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+/* Footer formatting */
+.footer {
+  padding: 20px;
+  border-radius: 3px;
+  color: #ececec;
+  background: #f2a365;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#newsletter-email {
+  text-align: center;
+}
+
+/* ////////////////////////////// //////////// ///////////////////// */
+/* ////////////////////////////// CONTACT FORM ///////////////////// */
+/* ////////////////////////////// //////////// ///////////////////// */
+
+#contact-form-container {
+  padding-bottom: 10em;
+}
+
+#contact-form-container form {
+  margin-top: 3em;
+  padding: 2em;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+
+  max-width: 800px;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+  align-items: center;
+
+  background-color: whitesmoke;
+}
+
+#contact-form-container form label {
+  font-size: 1.3em;
+}
+
+#contact-form-container label span {
+  font-size: 0.52em;
+  color: maroon;
+  display: block;
+}
+
+#contact-form-container input {
+  width: 100%;
+  padding: 0.3em;
+  font-size: 1.3em;
+  border: 1px solid grey;
+  border-radius: 0.2em;
+}
+
+#contact-form-container textarea {
+  font-size: 1.3em;
+}
+
+#contact-form-container input:focus {
+  outline: 2px solid lightskyblue;
+  -moz-outline-radius: 0.3em;
+}
+
+#contact-form-container input[type='submit'] {
+  width: 300px;
+  background-color: rgb(0, 123, 255);
+  color: whitesmoke;
+}
+#contact-form-container input[type='submit']:hover,
+#contact-form-container input[type='submit']:focus {
+  background-color: darkblue;
+}
+
+#contact-form-container .buttons-radio {
+  display: grid;
+}
+
+#contact-form-container .buttons {
+  grid-column: 2 / 3;
+  text-align: right;
+}
